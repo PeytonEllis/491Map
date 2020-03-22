@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Digital America Map</title>
+  <link rel="shortcut icon" type="image/png" href="./img/icons/favicon.png"/>
+  <link rel="stylesheet" href="./styles.css" media="print" onload="this.media='all'"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+  <style>
+  html, body {height:100%;margin:0;}
+  main {max-width:98%;}
+  #map {height:90vh;width:92vw;position:relative;}
+  </style>
+  <link rel="manifest" href="./manifest.json"/>
+  <link rel="icon" href="logo.jpg"/>
+  <link rel="preconnect" href="https://unpkg.com"/>
+  <link rel="preconnect" href="https://api.tiles.mapbox.com"/>
+  <meta name="theme-color" content="#213c69"/>
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="./img/icons/icon-144x144.png"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-status-bar-style" content="black"/>
+  <meta name="mobile-web-app-title" content="MSUWalkingTour"/>
+</head>
+<body>
+  <main role="main">
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+  <script>
+  var mymap = L.map('map').setView([39.8333333,-98.585522], 4.25);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 19,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
+  L.marker([45.467094, -98.474123]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.355852, -80.197593]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Sweet</a>');
+  L.marker([35.107049, -106.628424]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>  </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([38.816713, -77.084644]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Sweet</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([31.285815, -92.466213]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Sweet</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([35.202431, -101.833848]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([31.306431, -86.482554]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([37.149992, -98.031438]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([36.907976, -82.781550]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.179450, -97.127779]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>  </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([38.872777, -77.096665]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([33.757929, -84.428854]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>  </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([30.333173, -97.734872]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.113033, -97.315197]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([35.765650, -91.641595]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([30.459157, -91.133401]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a>');
+  L.marker([40.268146, -96.746097]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a>');
+  L.marker([30.092354, -94.142338]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.419397, -88.945165]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([34.219777, -80.248141]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([46.816103, -100.767743]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p>  <p>Fancy Cut Wax</p>');
+  L.marker([37.257447, -81.218878]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.605896, -93.420482]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([36.213848, -81.672254]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([36.975197, -86.437990]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([30.162011, -96.396818]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([34.945207, -85.720629]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.986237, -84.609015]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([41.964032, -91.680539]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([38.343967, -81.633933]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([32.765554, -79.900450]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([38.024939, -78.479138]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([39.276794, -80.355921]).addTo(mymap)
+    .bindPopup('<a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.197125, -90.575601]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>  </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.554772, -87.347135]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([27.962886, -82.805169]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([41.842704, -90.182875]).addTo(mymap)
+    .bindPopup('<a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>  </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Wax</p>');
+  L.marker([34.417563, -103.206608]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([32.455910, -84.995787]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([36.161380, -85.502380]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.960966, -83.768631]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([34.510418, -83.527573]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([27.789275, -97.419163]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([41.240183, -95.862819]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.592426, -83.857397]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([39.081358, -84.507573]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> ');
+  L.marker([30.222157, -92.375247]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.057424, -102.517062]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([32.752413, -96.787096]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([37.644886, -84.772629]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([41.517548, -90.574391]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([31.772580, -84.446768]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Sweet</a>');
+  L.marker([44.376284, -103.729319]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.208791, -97.134518]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([41.579944, -93.611798]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.621566, -90.822827]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.078194, -89.843847]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Sweet</a>');
+  L.marker([37.140491, -80.555259]).addTo(mymap)
+    .bindPopup('</br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.325584, -83.387731]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([36.066824, -76.610187]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([33.210266, -92.660190]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([31.806388, -106.476713]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.157098, -81.980510]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.924938, -79.850878]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.397329, -96.181955]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.389419, -97.873071]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.971864, -87.541035]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([39.482711, -80.140232]).addTo(mymap)
+    .bindPopup('<a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([46.849907, -96.837573]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.807355, -87.679173]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.983734, -101.335826]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.416876, -94.345743]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([32.749911, -97.316669]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.190069, -84.868319]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.667794, -80.922795]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.261432, -81.186506]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.394404, -110.775293]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([35.383533, -77.992856]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([29.509961, -97.449095]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([39.344973, -101.710176]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([39.338737, -80.023608]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([47.908846, -97.056212]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([40.909981, -98.367389]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.160369, -82.828169]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.608495, -77.371178]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([34.846392, -82.391329]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.396344, -91.034041]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.520775, -90.189461]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.343474, -86.310979]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([36.239802, -93.110442]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([40.610425, -98.393755]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([31.314917, -89.290481]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.661642, -80.894703]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([32.790425, -93.063199]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([33.665058, -93.588934]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.597686, -90.709616]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([29.732249, -95.354641]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.722232, -86.581482]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([38.065030, -97.910472]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([30.288366, -81.629090]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([46.900184, -98.716260]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([30.913801, -93.995694]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.577855, -92.156227]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.340175, -82.384848]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.292965, -82.477308]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([37.099127, -94.464745]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([39.085243, -94.590925]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.960475, -78.126393]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.233033, -91.668746]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br>  <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([40.385270, -91.397882]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([30.042915, -99.140093]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([35.957582, -83.916378]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.033212, -85.035575]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([30.217910, -92.034108]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.216729, -93.203642]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([28.022059, -81.947003]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([27.529278, -99.485324]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.162822, -115.145731]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.496698, -82.018347]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.965994, -95.240286]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([39.307836, -94.923900]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.909103, -81.526328]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([38.030951, -84.499727]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.735775, -92.287126]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.750880, -98.670915]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.889399, -97.673047]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.086152, -118.297789]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.116509, -82.605373]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([39.448277, -91.050976]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.239184, -85.741353]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.677540, -97.647116]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([32.836016, -83.642627]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.278487, -93.229900]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([31.141950, -90.461095]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.772643, -90.758818]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a>');
+  L.marker([35.681204, -82.006883]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([42.020023, -92.909052]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([39.452532, -77.966512]).addTo(mymap)
+    .bindPopup('<a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([34.909435, -95.757265]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([35.047589, -90.026272]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([32.356635, -88.696769]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.676304, -96.484158]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.087642, -83.247433]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([48.228174, -101.288207]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([30.684717, -88.047746]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.833876, -84.842234]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([30.735318, -91.591871]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.175180, -83.786044]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([35.086025, -84.034198]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.587683, -94.637690]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.141965, -86.759192]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([37.836762, -94.353044]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.111086, -77.054838]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.975243, -90.075521]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.072298, -76.492188]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([36.873395, -76.258256]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([32.641793, -85.383418]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([35.447414, -97.526733]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([41.258747, -96.018086]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([38.612609, -95.266179]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([41.010228, -92.410142]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([37.780543, -87.108092]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.452362, -85.638156]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([37.074872, -88.645755]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.812259, -82.807687]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([38.210089, -84.258893]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([31.127005, -84.151855]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([30.450767, -87.208539]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([44.363645, -100.338392]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.236877, -92.011359]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([36.760946, -83.695293]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([37.416637, -94.699446]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([38.262912, -104.604604]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.296504, -99.740975]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.783340, -83.557435]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> ');
+  L.marker([35.801930, -78.640946]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([40.088418, -98.520037]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([37.742941, -84.290739]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.275394, -79.931452]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([27.788574, -97.658921]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.972240, -77.811317]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([34.253103, -85.166242]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([37.747962, -80.464787]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([32.525115, -92.637043]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([38.568630, -121.476568]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.384256, -98.504833]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([26.124558, -97.626188]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.766907, -122.426959]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([29.877483, -97.937475]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([33.741683, -117.867751]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([32.072520, -81.086992]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([47.610165, -122.300187]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([35.349145, -96.924782]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([35.288409, -81.524326]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([32.517428, -93.763613]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.882701, -89.582005]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([36.185089, -94.531360]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([42.504662, -96.382904]).addTo(mymap)
+    .bindPopup('<a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([43.540763, -96.733058]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.948167, -81.927229]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([47.664894, -117.419025]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([35.944237, -78.110686]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([37.188110, -93.283624]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([35.911800, -82.066821]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.632100, -90.228365]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([36.905754, -82.312115]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([35.786064, -80.871621]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([47.240314, -122.443787]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.430364, -84.263046]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([27.941043, -82.479010]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([32.733157, -96.275695]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([33.439617, -94.032270]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([29.795717, -90.813547]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([34.574880, -83.333192]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([39.038042, -95.673708]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([46.922002, -98.002133]).addTo(mymap)
+    .bindPopup('<a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([49.270037, -123.120129]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([28.813898, -96.998164]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([30.687094, -92.265416]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a>');
+  L.marker([31.542782, -97.149731]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([46.270710, -96.603478]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([38.761220, -93.734445]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([42.488962, -92.340256]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([34.165220, -97.998694]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a>');
+  L.marker([37.142994, -94.464489]).addTo(mymap)
+    .bindPopup('<a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> </br> <a href="size5.jpg" target="_blank" rel="noopener">Fancy 5 Sweet</a> <p>Fancy Cut Green</p>');
+  L.marker([44.249831, -116.968760]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([32.876164, -85.180870]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([39.037543, -80.467122]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a>');
+  L.marker([37.550360, -76.810600]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([35.989691, -94.567922]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([33.905468, -98.494299]).addTo(mymap)
+    .bindPopup('<a href="size1.jpg" target="_blank" rel="noopener">Fancy 1 Alaska</a> </br> <a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([37.671686, -82.273275]).addTo(mymap)
+    .bindPopup('<a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  L.marker([39.172704, -78.166611]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a> <p>Fancy Cut Green</p> <p>Fancy Cut Wax</p>');
+  L.marker([31.923730, -92.640694]).addTo(mymap)
+    .bindPopup('<a href="size2.jpg" target="_blank" rel="noopener">Fancy 2 Alaska</a> </br> <a href="size3.jpg" target="_blank" rel="noopener">Fancy 3 Sweet</a> </br> <a href="size4.jpg" target="_blank" rel="noopener">Fancy 4 Sweet</a>');
+  </script>
+  </main>
+  <footer role="contentinfo">
+  </footer>
+  <script src="./app.js"></script>
+</body>
+</html>
