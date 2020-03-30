@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <theme-color content="#213c69">
   <title>Digital America Map</title>
   <link rel="shortcut icon" type="image/png" href="./img/icons/favicon.png"/>
   <link rel="stylesheet" href="./styles.css" media="print" onload="this.media='all'"/>
@@ -11,7 +12,7 @@
   <style>
   html, body {height:100%;margin:0;}
   main {max-width:98%;}
-  #map {height:90vh;width:92vw;position:relative;}
+  #map {height:70vh;width:92vw;position:relative;}
   </style>
   <link rel="manifest" href="./manifest.json"/>
   <link rel="icon" href="logo.jpg"/>
@@ -25,6 +26,16 @@
   <meta name="mobile-web-app-title" content="MSUWalkingTour"/>
 </head>
 <body>
+  <header role="banner">
+    <h1>491 Project</h1>
+  </header>
+  <nav role="navigation">
+    <a href="./intro.html">Intro</a>
+    <a href="./molly.html">Molly's Question</a>
+    <a href="./courtney.html">Courtney's Question</a>
+    <a href="./map.html">Map</a>
+    <a href="./addendum.html">Addendum</a>
+  </nav>
   <main role="main">
   <div id="map"></div>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
